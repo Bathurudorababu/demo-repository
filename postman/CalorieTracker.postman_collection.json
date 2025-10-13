@@ -1,0 +1,30 @@
+{
+  "info": {"name": "Calorie Tracker API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {
+      "name": "Register",
+      "request": {"method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "url": {"raw": "{{BASE_URL}}/api/v1/auth/register", "host": ["{{BASE_URL}}"], "path": ["api","v1","auth","register"]}, "body": {"mode":"raw", "raw": "{\n  \"name\": \"Test\",\n  \"email\": \"test2@example.com\",\n  \"password\": \"password123\"\n}"}}},
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {"method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "url": {"raw": "{{BASE_URL}}/api/v1/auth/login", "host": ["{{BASE_URL}}"], "path": ["api","v1","auth","login"]}, "body": {"mode":"raw", "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"}}},
+      "response": []
+    },
+    {
+      "name": "Me",
+      "request": {"method": "GET", "header": [{"key":"Authorization","value":"Bearer {{ACCESS_TOKEN}}"}], "url": {"raw": "{{BASE_URL}}/api/v1/auth/me", "host": ["{{BASE_URL}}"], "path": ["api","v1","auth","me"]}},
+      "response": []
+    },
+    {
+      "name": "Foods search",
+      "request": {"method": "GET", "url": {"raw": "{{BASE_URL}}/api/v1/foods?query=apple", "host": ["{{BASE_URL}}"], "path": ["api","v1","foods"], "query": [{"key":"query","value":"apple"}]}},
+      "response": []
+    },
+    {
+      "name": "Meals list",
+      "request": {"method": "GET", "header": [{"key":"Authorization","value":"Bearer {{ACCESS_TOKEN}}"}], "url": {"raw": "{{BASE_URL}}/api/v1/meals", "host": ["{{BASE_URL}}"], "path": ["api","v1","meals"]}},
+      "response": []
+    }
+  ]
+}
